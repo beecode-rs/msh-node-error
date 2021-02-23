@@ -1,0 +1,50 @@
+import { ErrorCodeType } from './enum';
+export declare const _errFn: (errorCode: ErrorCodeType) => (message?: string | undefined) => Error;
+export declare const error: {
+    client: {
+        badRequest: (message?: string | undefined) => Error;
+        unauthorized: (message?: string | undefined) => Error;
+        paymentRequired: (message?: string | undefined) => Error;
+        forbidden: (message?: string | undefined) => Error;
+        notFound: (message?: string | undefined) => Error;
+        methodNotAllowed: (message?: string | undefined) => Error;
+        notAcceptable: (message?: string | undefined) => Error;
+        proxyAuthenticationRequired: (message?: string | undefined) => Error;
+        requestTimeout: (message?: string | undefined) => Error;
+        conflict: (message?: string | undefined) => Error;
+        gone: (message?: string | undefined) => Error;
+        lengthRequired: (message?: string | undefined) => Error;
+        preconditionFailed: (message?: string | undefined) => Error;
+        payloadTooLarge: (message?: string | undefined) => Error;
+        requestUriTooLong: (message?: string | undefined) => Error;
+        unsupportedMediaType: (message?: string | undefined) => Error;
+        requestedRangeNotSatisfiable: (message?: string | undefined) => Error;
+        expectationFailed: (message?: string | undefined) => Error;
+        misdirectedRequest: (message?: string | undefined) => Error;
+        unprocessableEntity: (message?: string | undefined) => Error;
+        locked: (message?: string | undefined) => Error;
+        failedDependency: (message?: string | undefined) => Error;
+        upgradeRequired: (message?: string | undefined) => Error;
+        preconditionRequired: (message?: string | undefined) => Error;
+        tooManyRequests: (message?: string | undefined) => Error;
+        requestHeaderFieldsTooLarge: (message?: string | undefined) => Error;
+        connectionClosedWithoutResponse: (message?: string | undefined) => Error;
+        unavailableForLegalReasons: (message?: string | undefined) => Error;
+        clientClosedRequest: (message?: string | undefined) => Error;
+    };
+    server: {
+        internalServerError: (message?: string | undefined) => Error;
+        notImplemented: (message?: string | undefined) => Error;
+        badGateway: (message?: string | undefined) => Error;
+        serviceUnavailable: (message?: string | undefined) => Error;
+        gatewayTimeout: (message?: string | undefined) => Error;
+        httpVersionNotSupported: (message?: string | undefined) => Error;
+        variantAlsoNegotiates: (message?: string | undefined) => Error;
+        insufficientStorage: (message?: string | undefined) => Error;
+        loopDetected: (message?: string | undefined) => Error;
+        notExtended: (message?: string | undefined) => Error;
+        networkAuthenticationRequired: (message?: string | undefined) => Error;
+        networkConnectTimeoutError: (message?: string | undefined) => Error;
+    };
+};
+//# sourceMappingURL=node-error.d.ts.map

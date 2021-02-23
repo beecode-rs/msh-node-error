@@ -1,0 +1,1 @@
+{"version":3,"file":"error-handler.d.ts","sourceRoot":"","sources":["../src/error-handler.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,cAAc,CAAA;AACxC,OAAO,EAAE,YAAY,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAA;AAEzD,eAAO,MAAM,YAAY;6BACE,KAAK,GAAG,SAAS,QAAQ,OAAO,OAAO,QAAQ,SAAS,YAAY,KAAG,OAAO;CAQxG,CAAA"}
