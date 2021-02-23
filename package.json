@@ -95,7 +95,7 @@
     "prettier:fix": "prettier --write \"./src/**/*.{ts,json}\"",
     "semantic-release": "semantic-release",
     "semantic-release:check": "npm run semantic-release -- --dry-run --no-ci",
-    "test": "npm run test:unit -- --forbid-only && npm run test:int -- --forbid-only",
+    "test": "#npm run test:unit -- --forbid-only && npm run test:int -- --forbid-only",
     "test:int": "mocha ./src/test/{**/,/}*.ts",
     "test:unit": "mocha ./src/{**/,/}*.test.ts"
   },
