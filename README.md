@@ -21,4 +21,4 @@ This project is intended to be used in typescript project.
 
 ## Usage
 
-// TODO
+// TODO 
