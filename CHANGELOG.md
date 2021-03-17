@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/beecode-rs/msh-node-error/compare/v1.0.1...v1.0.2) (2021-03-17)
+
+
+### Bug Fixes
+
+* remove npm-force-resolutions ([8d6ef85](https://github.com/beecode-rs/msh-node-error/commit/8d6ef85af0de56e69ea465e825b85a84075137a1))
+
 ## [1.0.1](https://github.com/beecode-rs/msh-node-error/compare/v1.0.0...v1.0.1) (2021-02-26)
 
 
