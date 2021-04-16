@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/beecode-rs/msh-node-error/compare/v1.0.2...v1.0.3) (2021-04-16)
+
+
+### Bug Fixes
+
+* update package.json ([c9961a1](https://github.com/beecode-rs/msh-node-error/commit/c9961a14eaa5212bcc4bc26988aa7cfcfeff9b4a))
+
 ## [1.0.2](https://github.com/beecode-rs/msh-node-error/compare/v1.0.1...v1.0.2) (2021-03-17)
 
 
