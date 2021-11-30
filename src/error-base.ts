@@ -15,7 +15,7 @@ export class ErrorBase extends Error {
     return this._replaceUnderscores(ErrorCodeType[this.__errorCode])
   }
 
-  constructor(errorCode: ErrorCodeType, message?: string) {
+  public constructor(errorCode: ErrorCodeType, message?: string) {
     super()
     this.__errorCode = errorCode
     this.message = message ?? this.ErrorTypeName
