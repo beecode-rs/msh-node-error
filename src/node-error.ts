@@ -1,7 +1,9 @@
 import { ErrorCodeType } from './enum'
 import { ErrorBase } from './error-base'
 
-export const _errFn = (errorCode: ErrorCodeType) => (message?: string): Error => new ErrorBase(errorCode, message)
+export const _errFn = (errorCode: ErrorCodeType) => {
+  return (message?: string): Error => new ErrorBase(errorCode, message)
+}
 export const error = {
   client: {
     badRequest: _errFn(ErrorCodeType.BAD_REQUEST),
