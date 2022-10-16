@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/beecode-rs/msh-node-error/compare/v1.0.4...v1.0.5) (2022-10-16)
+
+
+### Bug Fixes
+
+* add src to release ([daf3d26](https://github.com/beecode-rs/msh-node-error/commit/daf3d26556a97b0746a0a9482bbdfc10cdc680b0))
+
 ## [1.0.4](https://github.com/beecode-rs/msh-node-error/compare/v1.0.3...v1.0.4) (2022-02-27)
 
 
