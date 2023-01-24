@@ -1,50 +1,345 @@
-import { ErrorCodeType } from './enum';
-export declare const _errFn: (errorCode: ErrorCodeType) => (message?: string | undefined) => Error;
-export declare const error: {
+import { HttpResponseCodeMapper } from './http-response-code';
+import { NodeErrorBase, NodeErrorPayload } from './node-error-base';
+export declare const _errorHOF: (httpCode: HttpResponseCodeMapper) => {
+    <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+    <T_1 extends NodeErrorPayload = any>(params?: {
+        name?: string | undefined;
+        message?: string | undefined;
+        payload?: T_1 | undefined;
+    } | undefined): NodeErrorBase;
+};
+export declare const nodeError: {
     client: {
-        badRequest: (message?: string | undefined) => Error;
-        unauthorized: (message?: string | undefined) => Error;
-        paymentRequired: (message?: string | undefined) => Error;
-        forbidden: (message?: string | undefined) => Error;
-        notFound: (message?: string | undefined) => Error;
-        methodNotAllowed: (message?: string | undefined) => Error;
-        notAcceptable: (message?: string | undefined) => Error;
-        proxyAuthenticationRequired: (message?: string | undefined) => Error;
-        requestTimeout: (message?: string | undefined) => Error;
-        conflict: (message?: string | undefined) => Error;
-        gone: (message?: string | undefined) => Error;
-        lengthRequired: (message?: string | undefined) => Error;
-        preconditionFailed: (message?: string | undefined) => Error;
-        payloadTooLarge: (message?: string | undefined) => Error;
-        requestUriTooLong: (message?: string | undefined) => Error;
-        unsupportedMediaType: (message?: string | undefined) => Error;
-        requestedRangeNotSatisfiable: (message?: string | undefined) => Error;
-        expectationFailed: (message?: string | undefined) => Error;
-        misdirectedRequest: (message?: string | undefined) => Error;
-        unprocessableEntity: (message?: string | undefined) => Error;
-        locked: (message?: string | undefined) => Error;
-        failedDependency: (message?: string | undefined) => Error;
-        upgradeRequired: (message?: string | undefined) => Error;
-        preconditionRequired: (message?: string | undefined) => Error;
-        tooManyRequests: (message?: string | undefined) => Error;
-        requestHeaderFieldsTooLarge: (message?: string | undefined) => Error;
-        connectionClosedWithoutResponse: (message?: string | undefined) => Error;
-        unavailableForLegalReasons: (message?: string | undefined) => Error;
-        clientClosedRequest: (message?: string | undefined) => Error;
+        badRequest: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        unauthorized: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        paymentRequired: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        forbidden: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        notFound: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        methodNotAllowed: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        notAcceptable: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        proxyAuthenticationRequired: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        requestTimeout: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        conflict: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        gone: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        lengthRequired: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        preconditionFailed: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        payloadTooLarge: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        requestUriTooLong: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        unsupportedMediaType: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        requestedRangeNotSatisfiable: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        expectationFailed: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        misdirectedRequest: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        unprocessableEntity: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        locked: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        failedDependency: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        upgradeRequired: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        preconditionRequired: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        tooManyRequests: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        requestHeaderFieldsTooLarge: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        connectionClosedWithoutResponse: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        unavailableForLegalReasons: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        clientClosedRequest: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
     };
     server: {
-        internalServerError: (message?: string | undefined) => Error;
-        notImplemented: (message?: string | undefined) => Error;
-        badGateway: (message?: string | undefined) => Error;
-        serviceUnavailable: (message?: string | undefined) => Error;
-        gatewayTimeout: (message?: string | undefined) => Error;
-        httpVersionNotSupported: (message?: string | undefined) => Error;
-        variantAlsoNegotiates: (message?: string | undefined) => Error;
-        insufficientStorage: (message?: string | undefined) => Error;
-        loopDetected: (message?: string | undefined) => Error;
-        notExtended: (message?: string | undefined) => Error;
-        networkAuthenticationRequired: (message?: string | undefined) => Error;
-        networkConnectTimeoutError: (message?: string | undefined) => Error;
+        internalServerError: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        notImplemented: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        badGateway: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        serviceUnavailable: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        gatewayTimeout: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        httpVersionNotSupported: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        variantAlsoNegotiates: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        insufficientStorage: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        loopDetected: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        notExtended: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        networkAuthenticationRequired: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
+        networkConnectTimeoutError: {
+            <T extends NodeErrorPayload = any>(message?: string | undefined, payload?: T | undefined): NodeErrorBase;
+            <T_1 extends NodeErrorPayload = any>(params?: {
+                name?: string | undefined;
+                message?: string | undefined;
+                payload?: T_1 | undefined;
+            } | undefined): NodeErrorBase;
+        };
     };
 };
 //# sourceMappingURL=node-error.d.ts.map

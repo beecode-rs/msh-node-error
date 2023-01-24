@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/beecode-rs/msh-node-error/compare/v1.0.5...v1.0.6) (2023-01-24)
+
+
+### Bug Fixes
+
+* lint errors ([3a096fd](https://github.com/beecode-rs/msh-node-error/commit/3a096fdf5aceb7406791364795785e6730fb0034))
+
 ## [1.0.5](https://github.com/beecode-rs/msh-node-error/compare/v1.0.4...v1.0.5) (2022-10-16)
 
 

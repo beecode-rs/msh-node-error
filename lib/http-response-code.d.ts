@@ -1,4 +1,4 @@
-export declare enum ErrorCodeType {
+export declare enum HttpResponseCodeMapper {
     /*********************
      * 1×× Informational
      ********************/
@@ -77,4 +77,4 @@ export declare enum ErrorCodeType {
     NETWORK_AUTHENTICATION_REQUIRED = 511,
     NETWORK_CONNECT_TIMEOUT_ERROR = 599
 }
-//# sourceMappingURL=enum.d.ts.map
+//# sourceMappingURL=http-response-code.d.ts.map
