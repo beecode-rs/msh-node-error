@@ -1,6 +1,7 @@
 import { HttpResponseCodeMapper } from './http-response-code'
 import { NodeErrorBase, NodeErrorPayload } from './node-error-base'
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const _errorHOF = (httpCode: HttpResponseCodeMapper) => {
   function closure<T extends NodeErrorPayload = any>(message?: string, payload?: T): NodeErrorBase
   function closure<T extends NodeErrorPayload = any>(params?: { name?: string; message?: string; payload?: T }): NodeErrorBase

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 export enum HttpResponseCodeMapper {
   /*********************
    * 1×× Informational
@@ -77,3 +78,4 @@ export enum HttpResponseCodeMapper {
   NETWORK_AUTHENTICATION_REQUIRED = 511,
   NETWORK_CONNECT_TIMEOUT_ERROR = 599,
 }
+/* eslint-enable @typescript-eslint/naming-convention */

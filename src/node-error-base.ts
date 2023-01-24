@@ -1,5 +1,5 @@
-import { stringUtil } from './util/string-util'
 import { HttpResponseCodeMapper } from './http-response-code'
+import { stringUtil } from './util/string-util'
 
 export type NodeErrorPayload = { [k: string]: any }
 
