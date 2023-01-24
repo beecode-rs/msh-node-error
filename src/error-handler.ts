@@ -1,9 +1,9 @@
-import { ErrorBase } from './error-base'
+import { NodeErrorBase } from './node-error-base'
 import { NextFunction, Request, Response } from 'express'
 
 export const errorHandler = {
-  expressMiddleware: (err: Error | ErrorBase, _req: Request, res: Response, _next: NextFunction): unknown => {
-    const code = err instanceof ErrorBase ? err.HTTPErrorCode : 500
+  expressMiddleware: (err: Error | NodeErrorBase, _req: Request, res: Response, _next: NextFunction): unknown => {
+    const code = (err as any).httpCode ?? 500
     return res.status(code).json({
       status: 'error',
       code,
